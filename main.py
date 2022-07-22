@@ -87,7 +87,13 @@ if __name__ == '__main__':
     parser.add_argument('--show_every', type=int, default=50)
     parser.add_argument('--network', type=str, default='conformer'
                         , choices=['resnet50', 'resnet101', 'vgg16', 'densenet161','conformer'])  # Network Architecture
-
+    #conformer setting
+    parser.add_argument('--patch_size', type=int, default=16)
+    parser.add_argument('--channel_ratio', type=int, default=4)
+    parser.add_argument('--embed_dim', type=int, default=384)
+    parser.add_argument('--depth', type=int, default=12)
+    parser.add_argument('--num_heads', type=int, default=6)
+    parser.add_argument('--mlp_ratio', type=int, default=4)
     # Train data
     parser.add_argument('--train_root', type=str, default='../RGBDcollection')
     parser.add_argument('--train_list', type=str, default='../RGBDcollection/train.lst')
